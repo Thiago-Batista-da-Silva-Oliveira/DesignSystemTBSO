@@ -1,11 +1,20 @@
 {
-  "name": "lib",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tbso-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Thiago-Batista-da-Silva-Oliveira/DesignSystemTBSO"
+  },
+  "private": false,
+  "version": "0.0.9",
   "type": "module",
+  "types": "lib/components/index.d.ts",
+  "main": "lib/components/Button/index.js",
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
