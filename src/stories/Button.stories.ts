@@ -8,7 +8,15 @@ const meta: Meta<typeof Button> = {
         bgColor: {
             type: "string",
         },
-        children: {}
+        size: {
+          type: "string",
+        },
+        textColor: {
+          type: "string",
+        },
+        title: {
+          type: "string",
+        }
     }
 }
 
@@ -16,9 +24,29 @@ export default meta
 
 type Story = StoryObj<typeof Button>
 
-export const Primary: Story = {
+export const Small: Story = {
     args: {
         bgColor: "red",
-        children: "Button"
+        size: "small",
+        textColor: "white",
+        title: "small"
+    }
+  };
+
+  export const Medium: Story = {
+    args: {
+        bgColor: "red",
+        size: "medium",
+        textColor: "white",
+        title: "medium"
+    }
+  };
+
+  export const Large: Story = {
+    args: {
+        bgColor: "red",
+        size: "large",
+        textColor: "white",
+        title: "large"
     }
   };
