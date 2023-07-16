@@ -1,4 +1,4 @@
-
+import './styles.css'
 
 interface IRequest {
     bgColor: string;
@@ -16,6 +16,7 @@ export const Button = ({bgColor, title, size="small", textColor="#FFF", ...rest}
     return (
         <button
         {...rest}
+        className='button'
          style={{
             cursor: "pointer",
             backgroundColor: bgColor,
