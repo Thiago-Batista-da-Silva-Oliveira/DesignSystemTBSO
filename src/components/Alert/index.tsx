@@ -1,9 +1,5 @@
-import {
-  AiOutlineInfoCircle,
-  AiFillCheckCircle,
-  AiFillWarning,
-} from "react-icons/ai";
-import { GiCancel } from "react-icons/gi";
+import {CancelSVG} from '../SVGS/Cancel'
+import {Check} from '../SVGS/Check'
 
 interface IRequest {
   type: "success" | "error" | "warning" | "info";
@@ -21,10 +17,10 @@ export const Alert = ({ type, title, description, width = "300px" }: IRequest) =
   };
 
   const icon = {
-    success: <AiFillCheckCircle color="#FFF" size={24} />,
-    error: <GiCancel color="#FFF" size={24} />,
-    warning: <AiFillWarning color="#FFF" size={24} />,
-    info: <AiOutlineInfoCircle color="#FFF" size={24} />,
+    success: <Check />,
+    error: <CancelSVG />,
+    warning: <Check/>,
+    info: <Check/>,
   };
   return (
     <div
@@ -52,7 +48,7 @@ export const Alert = ({ type, title, description, width = "300px" }: IRequest) =
         </div>
       </div>
       <button style={{ border: "none", background: "transparent" }}>
-        <GiCancel color="#FFF" size={24} />
+        <CancelSVG  />
       </button>
     </div>
   );

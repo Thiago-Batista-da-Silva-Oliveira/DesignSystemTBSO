@@ -5,10 +5,10 @@
     "url": "https://github.com/Thiago-Batista-da-Silva-Oliveira/DesignSystemTBSO"
   },
   "private": false,
-  "version": "0.0.9",
+  "version": "0.0.16",
   "type": "module",
   "types": "lib/components/index.d.ts",
-  "main": "lib/components/Button/index.js",
+  "main": "lib/components/index.js",
   "files": [
     "lib/**/*"
   ],
