@@ -1,5 +1,9 @@
-import {CancelSVG} from '../SVGS/Cancel'
-import {Check} from '../SVGS/Check'
+import {
+  AiFillCheckCircle,
+  AiFillWarning,
+  AiFillInfoCircle,
+} from "react-icons/ai";
+import { GiCancel } from "react-icons/gi";
 
 interface IRequest {
   type: "success" | "error" | "warning" | "info";
@@ -8,7 +12,12 @@ interface IRequest {
   width?: string;
 }
 
-export const Alert = ({ type, title, description, width = "300px" }: IRequest) => {
+export const Alert = ({
+  type,
+  title,
+  description,
+  width = "300px",
+}: IRequest) => {
   const bgColor = {
     success: "#4BB543",
     error: "#FF0000",
@@ -17,10 +26,10 @@ export const Alert = ({ type, title, description, width = "300px" }: IRequest) =
   };
 
   const icon = {
-    success: <Check />,
-    error: <CancelSVG />,
-    warning: <Check/>,
-    info: <Check/>,
+    success: <AiFillCheckCircle size="24" color="#FFF" />,
+    error: <GiCancel size="24" color="#FFF" />,
+    warning: <AiFillWarning size="24" color="#FFF" />,
+    info: <AiFillInfoCircle size="24" color="#FFF" />,
   };
   return (
     <div
@@ -40,7 +49,6 @@ export const Alert = ({ type, title, description, width = "300px" }: IRequest) =
             display: "flex",
             flexDirection: "column",
             gap: 2,
-      
           }}
         >
           <span style={{ fontWeight: "bold" }}>{title}</span>
@@ -48,7 +56,7 @@ export const Alert = ({ type, title, description, width = "300px" }: IRequest) =
         </div>
       </div>
       <button style={{ border: "none", background: "transparent" }}>
-        <CancelSVG  />
+        <GiCancel size="24" color="#FFF" />
       </button>
     </div>
   );
