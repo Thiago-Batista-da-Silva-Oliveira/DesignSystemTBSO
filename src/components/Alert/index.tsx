@@ -12,12 +12,7 @@ interface IRequest {
   width?: string;
 }
 
-export const Alert = ({
-  type,
-  title,
-  description,
-  width = "300px",
-}: IRequest) => {
+const Alert = ({ type, title, description, width = "300px" }: IRequest) => {
   const bgColor = {
     success: "#4BB543",
     error: "#FF0000",
@@ -61,3 +56,5 @@ export const Alert = ({
     </div>
   );
 };
+
+export default Alert;

@@ -1,31 +1,28 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "lib": ["dom", "ES2015"],
-    "module": "ESNext",
-    "target": "es6",
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "strict": true,
     "moduleResolution": "node",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "strict": true
-  },
-  "typeRoots": [
-    "node_modules/@types",
-    "custom_typings/"
-  ],
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+"declarationDir": "types",
+"emitDeclarationOnly": true,
+"jsx": "react-jsx",
+"lib": ["dom", "ES2015"],
+"module": "ESNext",
+"target": "es6",
+"composite": false,
+"declarationMap": true,
+"inlineSources": false,
+"isolatedModules": true,
+"noUnusedLocals": false,
+"noUnusedParameters": false,
+"preserveWatchOutput": true,
 }
+  }
+
+

@@ -7,7 +7,7 @@ interface IRequest {
   title: string;
 }
 
-export const Button = ({
+const Button = ({
   bgColor,
   title,
   size = "small",
@@ -36,3 +36,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;

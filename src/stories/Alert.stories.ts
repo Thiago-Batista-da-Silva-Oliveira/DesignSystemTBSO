@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Alert } from "../components";
+import Alert from "../components/Alert";
 
 const meta: Meta<typeof Alert> = {
   title: "Custom Alert",
@@ -15,8 +15,8 @@ const meta: Meta<typeof Alert> = {
       type: "string",
     },
     width: {
-        type: "string",
-    }
+      type: "string",
+    },
   },
 };
 
@@ -32,30 +32,26 @@ export const Success: Story = {
   },
 };
 
-
 export const Error: Story = {
-    args: {
-      title: "Error",
-      description: "check it out",
-      type: "error",
-    },
-  };
+  args: {
+    title: "Error",
+    description: "check it out",
+    type: "error",
+  },
+};
 
-  
-  export const Warning: Story = {
-    args: {
-      title: "Warning",
-      description: "check it out",
-      type: "warning",
-    },
-  };
+export const Warning: Story = {
+  args: {
+    title: "Warning",
+    description: "check it out",
+    type: "warning",
+  },
+};
 
-  
-  export const Info: Story = {
-    args: {
-      title: "Info",
-      description: "check it out",
-      type: "info",
-    },
-  };
-  
+export const Info: Story = {
+  args: {
+    title: "Info",
+    description: "check it out",
+    type: "info",
+  },
+};

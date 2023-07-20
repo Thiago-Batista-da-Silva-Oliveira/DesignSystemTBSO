@@ -1,3 +1,3 @@
 /* eslint-disable react-refresh/only-export-components */
-export * from "./Button";
-export * from "./Alert";
+export { default as Button } from "./Button";
+export { default as Alert } from "./Alert";
