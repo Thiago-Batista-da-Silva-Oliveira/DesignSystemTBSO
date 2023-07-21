@@ -1,5 +1,3 @@
-import "./styles.css";
-
 interface IRequest {
   bgColor: string;
   size?: "small" | "medium" | "large";
@@ -7,7 +5,7 @@ interface IRequest {
   title: string;
 }
 
-export const Button = ({
+const Button = ({
   bgColor,
   title,
   size = "small",
@@ -22,7 +20,6 @@ export const Button = ({
   return (
     <button
       {...rest}
-      className="button"
       style={{
         cursor: "pointer",
         backgroundColor: bgColor,
@@ -36,3 +33,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default Button;
