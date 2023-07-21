@@ -9,20 +9,19 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-"declarationDir": "types",
-"emitDeclarationOnly": true,
-"jsx": "react-jsx",
-"lib": ["dom", "ES2015"],
-"module": "ESNext",
-"target": "es6",
-"composite": false,
-"declarationMap": true,
-"inlineSources": false,
-"isolatedModules": true,
-"noUnusedLocals": false,
-"noUnusedParameters": false,
-"preserveWatchOutput": true,
-}
+    "declarationDir": "types",
+    "emitDeclarationOnly": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "ES2015"],
+    "module": "ESNext",
+    "target": "es6",
+    "composite": false,
+    "declarationMap": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "rootDir": "src"
   }
-
-
+}
