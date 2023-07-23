@@ -14,6 +14,21 @@ const meta: Meta<typeof Table> = {
         control: {
             type: "object",
         }
+    },
+    backgroundColor: {
+        control: {
+          type: "string"
+        }
+    },
+    color: {
+        control: {
+          type: "string"
+        }
+    },
+    width: {
+        control: {
+          type: "string"
+        }
     }
   },
 };

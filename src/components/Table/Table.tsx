@@ -11,16 +11,38 @@ type TableProps = {
   columns: TableColumn[];
   width?: string;
   data: any[];
+  backgroundColor?: string;
+  color?: string;
 };
 
-const Table = ({ columns, data, width = "200px", ...rest }: TableProps) => {
+const Table = ({
+  columns,
+  data,
+  width = "200px",
+  backgroundColor = "#04AA6D",
+  color = "#FFF",
+  ...rest
+}: TableProps) => {
   return (
-    <div {...rest}>
+    <table
+      style={{
+        fontFamily: "Arial, Helvetica, sans-serif",
+        borderCollapse: "collapse",
+        width: "100%",
+      }}
+      {...rest}
+    >
       <thead>
         <tr>
           {columns.map((column, index) => (
             <th
-              style={{ width }}
+              style={{
+                width,
+                textAlign: "left",
+                backgroundColor,
+                padding: "12px 8px",
+                color,
+              }}
               colSpan={column.colSpan}
               key={column.title + index}
               scope="col"
@@ -40,7 +62,12 @@ const Table = ({ columns, data, width = "200px", ...rest }: TableProps) => {
             {columns.map(
               ({ Cell, field, title, colSpan, color }, columnIndex) => (
                 <td
-                  style={{ width: "200px", color: color ? entry.color : "" }}
+                  style={{
+                    width: "200px",
+                    color: color ? entry.color : "",
+                    border: "1px solid #ddd",
+                    padding: "8px",
+                  }}
                   key={title + columnIndex}
                   colSpan={colSpan}
                 >
@@ -51,7 +78,7 @@ const Table = ({ columns, data, width = "200px", ...rest }: TableProps) => {
           </tr>
         ))}
       </tbody>
-    </div>
+    </table>
   );
 };
 
