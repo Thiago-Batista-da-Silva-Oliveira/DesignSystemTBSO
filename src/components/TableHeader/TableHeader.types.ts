@@ -1,19 +1,20 @@
-type TableColumn<Entry> = {
-    title: string;
-    field: keyof Entry;
-    Cell?({ entry }: { entry: Entry }): React.ReactElement;
-    CustomHeader?: () => React.ReactElement;
-    colSpan?: number;
-    color?: boolean;
-  };
+type TableColumn = {
+  title: string;
+  field:string;
+  Cell?({ entry }: { entry: any }): React.ReactElement;
+  CustomHeader?: () => React.ReactElement;
+  colSpan?: number;
+  color?: boolean;
+};
 
- type TableProps<Entry> = {
-    columns: TableColumn<Entry>[];
+
+ type TableProps = {
+    columns: TableColumn[];
     width?: string;
   };
 
 export declare const TableHeader: ({
   columns,
   width
-}: TableProps<any>) => import("react/jsx-runtime").JSX.Element;
+}: TableProps) => import("react/jsx-runtime").JSX.Element;
 export {};

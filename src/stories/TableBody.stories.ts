@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TableHeader } from "../components";
+import { TableBody } from "../components";
 
-const meta: Meta<typeof TableHeader> = {
-  title: "Custom TableHeader",
-  component: TableHeader,
+const meta: Meta<typeof TableBody> = {
+  title: "Custom TableBody",
+  component: TableBody,
   argTypes: {
     columns: {
         control: {
             type: "object",
         }
     },
-    width: {
+    data: {
         control: {
-            type: "string",
+            type: "object",
         }
     }
   },
@@ -20,9 +20,9 @@ const meta: Meta<typeof TableHeader> = {
 
 export default meta;
 
-type Story = StoryObj<typeof TableHeader>;
+type Story = StoryObj<typeof TableBody>;
 
-export const Header: Story = {
+export const Body: Story = {
   args: {
    columns: [
      {
@@ -37,6 +37,19 @@ export const Header: Story = {
         title: "Address",
         field: "address",
      },
+   ],
+   data: [
+    {
+        name: "Mehmet",
+        age: 23,
+        address: "Lorem ipsum",
+    },
+    {
+        name: "Zerya Betül",
+        age: 16,
+        address: "Lorem ipsum",
+    }
    ]
   },
+  
 };
