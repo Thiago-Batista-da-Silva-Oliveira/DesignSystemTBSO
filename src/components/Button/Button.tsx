@@ -1,4 +1,4 @@
-interface IRequest {
+interface IRequest extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   bgColor: string;
   size?: "small" | "medium" | "large";
   textColor?: string;
